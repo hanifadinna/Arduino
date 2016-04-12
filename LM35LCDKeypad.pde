@@ -62,22 +62,7 @@ void loop()
   lcd.setCursor(10, 1);;  
   lcd.print(reamur,DEC);
   
-  delay(1000);               // the purpose of delay is to delay the update temprature value for not too fast
-  temp_value_clear();        // clear the temprature value
+  delay(1000);               // delay 1000ms
+  
 }
   
-void temp_value_clear(void)
-{
-  unsigned char i;
-  for(i=0 ; i<2 ; i++)              
-    {
-    lcd.setCursor(2,i);            // set cursor position
-    lcd.print("      ");           
-    }
-    
-  for(i=0 ; i<2 ; i++)
-    {
-    lcd.setCursor(10,i);          // set cursor position
-    lcd.print("      ");
-    }
-}
